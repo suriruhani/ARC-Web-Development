@@ -4,7 +4,7 @@ let router = express.Router();
 
 const firstPlaceQuery = 
 `
-SELECT * FROM score ORDER BY DESC LIMIT 1
+SELECT * FROM score ORDER BY score DESC LIMIT 1
 `
 
 const getPlayerScoreQuery = 
@@ -43,15 +43,19 @@ function sampleCodes(){
 	Another way to render and send data over to view side.
 	
 	(Extra) In context, we call this the middleware.
-	*/
+	
 	res.render('Name of View file to be rendered', 
-	{ title: 'Title of the webpage. Equivalent to <title>ABC</title>' }, 
-	key: "value", anotherKey: "Yet another value :3");
+	{ title: 'Title of the webpage. Equivalent to <title>ABC</title>', key: "value", anotherKey: "Yet another value :3" } 
+	);
+	*/
 }
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+	pool.query(firstPlaceQuery, (err, data) => {
+		console.log(data);
+		res.render('index', { title: 'Express', data: data.rows});
+	});
 });
 
 /* POST home page. */
