@@ -16,3 +16,8 @@ node bin/www
 
 Setting up Database:  
 Run  all codes in  schema.sql
+
+Open browser of choice and enter following URL:
+```
+localhost:3000
+```
