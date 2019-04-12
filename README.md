@@ -9,6 +9,8 @@ Setting up Express environment:
 ```
 npm install express-generator -g
 npm install ejs
+npm install pg
+npm install body-parser --save
 npm install dotenv --save
 express App --view=ejs
 ```
