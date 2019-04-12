@@ -1,5 +1,10 @@
 # ARC-Web-Development
 
+Clone this repo:
+```
+git clone https://github.com/weizhang05/ARC-Web-Development.git
+```
+
 Setting up Express environment:
 ```
 npm install express-generator -g
