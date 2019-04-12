@@ -9,6 +9,7 @@ Setting up Express environment:
 ```
 npm install express-generator -g
 npm install ejs
+npm install dotenv --save
 express App --view=ejs
 ```
 
