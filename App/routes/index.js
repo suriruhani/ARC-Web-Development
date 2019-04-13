@@ -12,9 +12,15 @@ const getPlayerScoreQuery =
 SELECT * FROM score WHERE name = $1
 `
 
-const getAllPlayerNames =
+const getAllPlayerNamesQuery =
 `
 SELECT name FROM score
+`
+
+const addPlayerScoreQuery =
+`
+INSERT INTO score(name, score)
+VALUES($1, $2)
 `
 
 /*
