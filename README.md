@@ -8,11 +8,11 @@ git clone https://github.com/weizhang05/ARC-Web-Development.git
 Setting up Express environment:
 ```
 npm install express-generator -g
+express App --view=ejs
 npm install ejs
 npm install pg
 npm install body-parser --save
 npm install dotenv --save
-express App --view=ejs
 ```
 
 Start web service:
